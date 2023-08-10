@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
 //import { BiMenu } from "react-icons/bi";
@@ -11,6 +11,16 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Sidebar() {
   const [onRoute, setOnRoute] = useState(0);
+
+  useEffect(() => {
+    const currentURL = window.location.href;
+    if(currentURL.includes("experience")){
+      setOnRoute(1);
+    }
+    else if(currentURL.includes("works")){
+      setOnRoute(2);
+   }
+  }, []); 
 
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
