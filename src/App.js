@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 
 import ErrorPage from "./components/ErrorPage.js";
 import Sidebar from "./components/Sidebar.js";
+import Experience from "./components/Experience.js";
 import Works from "./components/Works.js";
 import Overview from "./components/Overview.js";
 
@@ -23,7 +24,7 @@ function App() {
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
                   <Route path="/" exact={true} element={<></>} />
-                  <Route path="/experience" exact={true} element={<></>} />
+                  <Route path="/experience" exact={true} element={<Experience />} />
                   <Route path="/works" exact={true} element={<Works />} />
                   <Route path="/works/:title" exact={true} element={<Overview />} />
                 </Routes>

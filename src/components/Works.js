@@ -15,11 +15,11 @@ function WorkBlock({index}) {
       xl={4}
       className="h-fit mt-3 px-2 py-2 d-flex align-items-center justify-content-center"
     >
-      <Link to={`/works/${projectInfo.projects[index].title}`} className="w-72 flex flex-col items-center justify-center drop-shadow-none shadow-none no-underline shiftAnim liftAnim">
-        <div className="w-80 flex flex-col items-center justify-center drop-shadow-none shadow-none">
+      <Link to={`/works/${projectInfo.projects[index].title}`} className="w-72 flex flex-col items-center justify-center no-underline shiftAnim liftAnim">
+        <div className="w-80 flex flex-col items-center justify-center liftAnim">
           <Image
-            src={require("../assets/images/" + `${projectInfo.projects[index].images[0].src}`)}
-            className="w-full h-60 object-cover object-center liftAnim"
+            src={require(`../assets/images/${projectInfo.projects[index].cover.src}`)}
+            className="w-full h-60 object-cover object-center "
           />
           <h3 className="font-semibold text-black text-center text-xl mt-2 bg-transparent	Monstserrat liftAnim">{projectInfo.projects[index].title.replaceAll('-', ' ')}</h3>
         </div>

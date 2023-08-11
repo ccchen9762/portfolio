@@ -1,27 +1,68 @@
 {
     "projects": [
         {
+            "title": "Unity-2D-strategy-game", 
+            "time": "2023 Spring",
+            "link": "https://fingerblack.github.io/LostSheeps/",
+            "cover": {
+                "src": "lostsheeps.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
+            "images": [
+                {
+                    "src": "https://www.youtube.com/embed/_9Z4_0w9e4Y", 
+                    "alt": "vid1",
+                    "type": "video"
+                }
+            ],
+            "description": "LostSheeps is a Unity 2D strategy game developed by a 6-member team. With ideas from push the box game, you will fight the enemies in an innovative way. In this game I am in charge of abstract class design, enemy and turret scripts and story UI. Defining abstract class of enemy and turret and inherit from them make development a lot easier like add a new kind of enemy or access all turrets in script. Definitely checkout the link and play it yourself!"
+        },
+        {
+            "title": "Impulse-based-physics-system", 
+            "time": "2022 Fall",
+            "link": "",
+            "cover": {
+                "src": "physics1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
+            "images": [
+                {
+                    "src": "https://www.youtube.com/embed/TFW36F5cc_0", 
+                    "alt": "vid1",
+                    "type": "video"
+                }
+            ],
+            "description": "This impulse based physics system is an extension of game engine base from class (Prime Engine). I implemented sphere and OBB collider, and update object position with velocity and angular velocity calculated by momentum reservation that applied to collider. For OBB to OBB collision, I use seperating axis theorem to check collision. Each cycle update position based on frame time times speed. In video cyan boxes are meshes debuggers, orange boxes are colliders."
+        },
+        {
             "title": "Inverse-Kinematics", 
             "time": "2022 Spring",
             "link": "",
+            "cover": {
+                "src": "IK1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
-                {
-                    "src": "IK1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                },
                 {
                     "src": "https://www.youtube.com/embed/FYHRDi22t98", 
                     "alt": "vid1",
                     "type": "video"
                 }
             ],
-            "description": "Implemented forward and inverse kinematics using pseudo inverse and damped least square method, and using linear blending and dual quaternion for skinning when moving the handle, using using C++, OpenGL."
+            "description": "Inverse Kinematics is a process to place node tree with desire end points position. In this project I implemented damped least square method and pseudo inverse algorithm, and use linear blending and dual quaternion for skinning. Video above has 3 parts, first part demonstrates linear blending with damped least square method, second part is linear blending with pseudo inverse, and third part is damped least square method and switches between linear blending and dual quaternion skinning algorithms."
         },
         {
             "title": "Angular-stock-search-website", 
             "time": "2022 Spring",
-            "link": "https://myfirstnodejs-343823.wm.r.appspot.com/search/AAPL",
+            "link": "https://myfirstnodejs-343823.wm.r.appspot.com/",
+            "cover": {
+                "src": "stock_search1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
                 {
                     "src": "stock_search1.jpg", 
@@ -29,61 +70,53 @@
                     "type": "img"
                 }
             ],
-            "description": "An responsive AJAX stock search website using Angular front-end and Node.js back-end, check the website here!"
+            "description": "This stock search website using Angular framework as front-end and express framework Node.js back-end. The search bar is implemented with auto-complete, back-end will query finnhub.io with user input for a list of possible stock symbol. After choose stock, back-end will gathering information from finnhub and shows summary such as recent price, news and charts. User can simulate buying stocks with mock trading functionality. With HTML5 local storage, it can save previous simulated stock trade of user locally."
         },
         {
             "title": "Motion-capture-interpolation", 
             "time": "2022 Spring",
             "link": "",
+            "cover": {
+                "src": "mocap_interpolation1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
-                {
-                    "src": "mocap_interpolation1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                },
                 {
                     "src": "https://www.youtube.com/embed/vHeksIJ06DM", 
                     "alt": "vid1",
                     "type": "video"
                 }
             ],
-            "description": "Interpolated motion capture keyframe with linear Euler angle, Bezier Euler angle, quaternion SLERP, andBezier quaternion SLERP, using C++, OpenGL."
+            "description": "With a list of keyframe data points, interpolate from them can generate a complete and smooth motion. This project use linear Euler angle, Bezier Euler angle, quaternion SLERP, and Bezier quaternion SLERP to restore a motion capture with keyframe points. Video demonstrates the original motion capture and regenerated motion from the 4 methods mentioned earlier. Generally, euler models have exaggerate rotation when angle is large while quaternion models are more close to original. Linear models have stiffer motion while Bezier have smooth rotation."
         },
         {
             "title": "Physically-based-simulation", 
             "time": "2022 Spring",
             "link": "",
+            "cover": {
+                "src": "jello_cube1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
-                {
-                    "src": "jello_cube1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                },
                 {
                     "src": "https://www.youtube.com/embed/s-GF7p1fJ0g", 
                     "alt": "vid1",
                     "type": "video"
                 }
             ],
-            "description": "A spring-mass system for simulating jello cube bouncing inside an area, and applied penalty based contact when collision. Using C++, OpenGL."
-        },
-        {
-            "title": "Lord-of-the-Land", 
-            "time": "2022 Spring",
-            "link": "https://play.unity.com/mg/other/lord-of-the-land",
-            "images": [
-                {
-                    "src": "landlord1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                }
-            ],
-            "description": "An Unity simulation game made in Global Game Jam 2022(USC games). Play WebGL version here! Coworking, using Unity."
+            "description": "This project uses a spring-mass system for simulating jello cube bouncing inside an area. With structure bend, and shear springs, it react with force and update position with Runge-Kutta Method of Order 4 (RK4) and Euler integrators. When collide with walls, penalty based force is applied to jelly. Also jelly cube is affect by force field and mouse input."
         },
         {
             "title": "Ray-Tracer", 
             "time": "2021 Fall",
             "link": "",
+            "cover": {
+                "src": "ray_tracer1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
                 {
                     "src": "ray_tracer1.jpg", 
@@ -101,30 +134,35 @@
                     "type": "img"
                 }
             ],
-            "description": "Backward Ray-tracer with multiple reflections and soft shadows. Every pixel is rendered by averaging 4 rays for anti-aliasing. View the Github page here! Using OpenGL, C++."
+            "description": "Backward Ray-tracer is a way of rendering that simulates actual light. First calculating light intersections with objects inside the scene, then reflect the light to find next intersection. Repeat this operation to accumulate the pixel color. I implemented with multiple reflections and soft shadows. Also, every pixel is rendered by averaging 4 rays for anti-aliasing."
         },
         {
             "title": "Catmull-Rom-Splines", 
             "time": "2021 Fall",
             "link": "",
+            "cover": {
+                "src": "roller_coaster1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
-                {
-                    "src": "roller_coaster1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                },
                 {
                     "src": "https://www.youtube.com/embed/1xIiHSqa4d4", 
                     "alt": "vid1",
                     "type": "video"
                 }
             ],
-            "description": "A roller coaster which rails are generated by Catmull-Rom-Splines and drawn by using recursive subdivision running in an immersive surrounding environment. View the Github page here! Using OpenGL, C++."
+            "description": "Catmull-Rom-Splines can generate smooth curve that has continuous tangent vectors from a list of data points. The video above uses 26 3D points to generate roller coaster rails, and render with recursive subdivision. The cart then moves along the tangent vector of rail. For enironment I use sky box, random trees and grass texture. Enjoy the ride!"
         },
         {
             "title": "JPEG-Compression", 
             "time": "2017 Fall",
             "link": "",
+            "cover": {
+                "src": "jpeg1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
                 {
                     "src": "jpeg1.jpg", 
@@ -133,29 +171,29 @@
                 },
                 {
                     "src": "jpeg2.jpg", 
-                    "alt": "img1",
+                    "alt": "img2",
                     "type": "img"
                 }
             ],
-            "description": "Implemented JPEG encoder and decoder on grayscale raw files. The images on the left is encoded and decoded with quality factor of 50. View the Github page here! Using C++."
+            "description": "A Jpeg compression implementation of encoder and decoder on grayscale raw files. The process goes through subsampling, DCT, Quatization, then first number of each block do DC differetial coding, the rest of numbers do AC run-length coding with zigzag order. The images above is encoded and decoded with quality factor of 50 and have PSNR value of 26.1336 and 33.6993"
         },
         {
             "title": "Java-Mario-Like-Game", 
             "time": "2016 Spring",
             "link": "",
+            "cover": {
+                "src": "dashan1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
             "images": [
-                {
-                    "src": "dashan1.jpg", 
-                    "alt": "img1",
-                    "type": "img"
-                },
                 {
                     "src": "https://www.youtube.com/embed/sU1U4YHqqjw", 
                     "alt": "vid1",
                     "type": "video"
                 }
             ],
-            "description": "A 2D Mario-like game made with Lightweight Java Game Library. View the Github page here! Using Java."
+            "description": "A 2D Mario-like game made with Lightweight Java Game Library. Implemented level and game loop from scratch, including character animation, 2D AABB collision and scene change."
         }
     ]
 }
