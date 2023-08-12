@@ -4,8 +4,8 @@ import { BiLeftArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 import Carousel from './Carousel.js';
-import ErrorPage from "./ErrorPage.js";
-import projectInfo from "../assets/data/ProjectInfo.json";
+import ErrorPage from "../ErrorPage.js";
+import projectInfo from "../../assets/data/ProjectInfo.json";
 
 function Overview() {
   const { title } = useParams();
@@ -26,7 +26,7 @@ function Overview() {
 
   return (
       <motion.div
-        className="w-full h-full m-0 p-0 row box"
+        className="w-full h-full m-0 p-0 row box "
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -37,7 +37,7 @@ function Overview() {
         <div className="bg-slate-50">
           <Row className="w-full h-fit m-0 p-0">
             <Link to="/works" className='w-fit h-fit col no-underline mt-3'>
-              <BiLeftArrowAlt className='w-12 h-12 text-black hover:cursor-pointer'/>
+              <BiLeftArrowAlt className='w-12 h-12 hover:cursor-pointer hover:!text-gray-600 active:!text-gray-400 text-black'/>
             </Link>
           </Row>  
           <Row className="w-full h-fit m-0 p-0">
@@ -48,7 +48,7 @@ function Overview() {
             <h1 className="text-2xl mt-2 text-right">{projectInfo.projects[index].time}</h1>
           </Row>  
 
-          <Row className="w-full h-96 mx-0 my-4 px-8">
+          <Row className="w-full h-[28rem] mx-0 my-4 px-8">
             <Carousel images={projectInfo.projects[index].images}/>
           </Row>
           

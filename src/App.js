@@ -6,9 +6,10 @@ import Col from "react-bootstrap/Col";
 
 import ErrorPage from "./components/ErrorPage.js";
 import Sidebar from "./components/Sidebar.js";
-import Experience from "./components/Experience.js";
-import Works from "./components/Works.js";
-import Overview from "./components/Overview.js";
+import Profile from "./components/profile/Profile.js";
+import Experience from "./components/experience/Experience.js";
+import Works from "./components/portfolio/Works.js";
+import Overview from "./components/portfolio/Overview.js";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               <Col className="m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
-                  <Route path="/" exact={true} element={<></>} />
+                  <Route path="/" exact={true} element={<Profile />} />
                   <Route path="/experience" exact={true} element={<Experience />} />
                   <Route path="/works" exact={true} element={<Works />} />
                   <Route path="/works/:title" exact={true} element={<Overview />} />

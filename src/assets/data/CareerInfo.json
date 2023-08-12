@@ -1,0 +1,26 @@
+{
+    "careers":[
+        {
+            "position": "Software Engineer Intern",
+            "company": "My CareLinq Inc.",
+            "location": "Los Angeles, CA",
+            "time": "May 2022 - August 2022",
+            "bullets": [
+                "Integrated backend APIs with third party payment system to ensure security and integrity of financial transactions",
+                "Developed a responsive frontend for entire payment pipeline using React and Tailwind CSS for stylish design",
+                "Analyzed website usage with Google Analytics and maintain site availability"
+            ]
+        },
+        {
+            "position": "Assistant Software Engineer",
+            "company": "Industrial Technology Research Institute",
+            "location": "Hsinchu, Taiwan",
+            "time": "December 2020 - July 2021",
+            "bullets": [
+                "Created image processing flows to label organ segments and perform volume analysis based on ultrasound images",
+                "Utilized Unet CNN model with TensorFlow to enhance accuracy of ultrasound image processing",
+                "Transferred machine learning model and processing flows to Android with TensorFlow Lite and integrated with portable ultrasound devices to calculate organs volume in real time"
+            ]
+        }
+    ]
+}

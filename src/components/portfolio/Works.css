@@ -1,13 +1,11 @@
-.Monstserrat{
-    font-family: 'Montserrat', sans-serif !important;
-}
+
 
 @keyframes moveTopLeft {
   from {
       transform: translate(0, 0);
   }
   to {
-      transform: translate(0px, -8px); /* Adjust the pixel values as needed */
+      transform: translate(0px, -12px); /* Adjust the pixel values as needed */
   }
 }
 
@@ -21,15 +19,15 @@
 
 @keyframes liftShadow {
   from {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
   }
   to {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1.0);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1.0) !important;
   }
 }
 
 .liftAnim {
-  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+  transition: transform 0.3s ease-in-out;
 }
 
 .liftAnim:hover {

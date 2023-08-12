@@ -25,7 +25,7 @@ function Sidebar() {
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
   return (
-    <div className="flex items-center w-16 h-screen m-0 py-1">
+    <div className="flex items-center w-20 h-screen m-0 py-2">
       <Nav className="h-fit p-0">
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Profile")}>
@@ -36,11 +36,12 @@ function Sidebar() {
               }}
               className={
                 onRoute === 0
-                  ? "w-full h-fit m-0 p-0 nav-link rounded-2xl bg-stone-100"
-                  : "w-full h-fit m-0 p-0 nav-link rounded-2xl hover:bg-stone-500"
+                  ? "w-full h-fit m-0 p-0 nav-link rounded-xl text-center bg-stone-100"
+                  : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="w-full h-12 p-2" />
+              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="w-full h-12 p-2 pb-1" />
+              <p className={ onRoute === 0 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Profile</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -53,11 +54,12 @@ function Sidebar() {
               }}
               className={
                 onRoute === 1
-                  ? "w-full h-fit m-0 p-0 nav-link rounded-2xl bg-stone-100"
-                  : "w-full h-fit m-0 p-0 nav-link rounded-2xl hover:bg-stone-500"
+                  ? "w-full h-fit m-0 p-0 nav-link rounded-xl text-center bg-stone-100"
+                  : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="w-full h-12 p-2" />
+              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="w-full h-12 p-2 pb-1" />
+              <p className={ onRoute === 1 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Experience</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -70,14 +72,15 @@ function Sidebar() {
               }}
               className={
                 onRoute === 2
-                  ? "w-full h-fit m-0 p-0 nav-link rounded-2xl bg-stone-100"
-                  : "w-full h-fit m-0 p-0 nav-link rounded-2xl hover:bg-stone-500"
+                  ? "w-full h-fit m-0 p-0 nav-link rounded-xl text-center bg-stone-100"
+                  : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
               <AiOutlineAppstore
                 color={onRoute === 2 ? "coral" : "white"}
-                className="w-full h-12 p-2"
+                className="w-full h-12 p-2 pb-1"
               />
+              <p className={ onRoute === 2 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Portfolio</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -89,9 +92,10 @@ function Sidebar() {
             <Nav.Link
               href="https://github.com/moom1315"
               target="_blank"
-              className="w-full h-fit m-0 p-0 rounded-2xl hover:bg-stone-500"
+              className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
             >
               <FaGithub color="white" className="w-full h-12 p-2" />
+              <p className="w-full h-fit m-0 px-0 pb-1 text-xs text-white">Github</p>
             </Nav.Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -100,9 +104,10 @@ function Sidebar() {
             <Nav.Link
               href="https://www.linkedin.com/in/ching-chih-chen/"
               target="_blank"
-              className="w-full h-fit m-0 p-0 rounded-2xl hover:bg-stone-500"
+              className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
             >
               <FaLinkedin color="white" className="w-full h-12 p-2" />
+              <p className="w-full h-fit m-0 px-0 pb-1 text-xs text-white">Linkedin</p>
             </Nav.Link>
           </OverlayTrigger>
         </Nav.Item>

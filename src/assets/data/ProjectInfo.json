@@ -152,7 +152,7 @@
                     "type": "video"
                 }
             ],
-            "description": "Catmull-Rom-Splines can generate smooth curve that has continuous tangent vectors from a list of data points. The video above uses 26 3D points to generate roller coaster rails, and render with recursive subdivision. The cart then moves along the tangent vector of rail. For enironment I use sky box, random trees and grass texture. Enjoy the ride!"
+            "description": "Catmull-Rom-Splines can generate smooth curve that has continuous tangent vectors from a list of data points. The video above uses 26 3D points to generate roller coaster rails, and render with recursive subdivision. The cart then moves along the tangent vector of rail. For enironment I use sky box texture, random position and size of trees and floor with grass texture."
         },
         {
             "title": "JPEG-Compression", 
