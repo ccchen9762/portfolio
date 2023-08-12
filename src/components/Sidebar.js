@@ -25,7 +25,7 @@ function Sidebar() {
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
   return (
-    <div className="flex items-center w-20 h-screen m-0 py-2 raleway">
+    <div className="flex items-center w-20 h-screen m-0 py-2">
       <Nav className="h-fit p-0">
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Profile")}>
@@ -40,8 +40,8 @@ function Sidebar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="w-full h-12 p-2 pb-1" />
-              <p className={ onRoute === 0 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Profile</p>
+              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="w-full h-auto px-3 pt-1" />
+              <p className={ onRoute === 0 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-orange-600" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Profile</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -58,8 +58,8 @@ function Sidebar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="w-full h-12 p-2 pb-1" />
-              <p className={ onRoute === 1 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Experience</p>
+              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="w-full h-auto px-3 pt-1" />
+              <p className={ onRoute === 1 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-orange-600" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Experience</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -76,11 +76,8 @@ function Sidebar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <AiOutlineAppstore
-                color={onRoute === 2 ? "coral" : "white"}
-                className="w-full h-12 p-2 pb-1"
-              />
-              <p className={ onRoute === 2 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-black" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Portfolio</p>
+              <AiOutlineAppstore color={onRoute === 2 ? "coral" : "white"} className="w-full h-auto px-3 pt-1" />
+              <p className={ onRoute === 2 ? "w-full h-fit m-0 px-0 pb-1 text-xs text-orange-600" : "w-full h-fit m-0 px-0 pb-1 text-xs text-white"}>Portfolio</p>
             </Link>
           </OverlayTrigger>
         </Nav.Item>
@@ -94,7 +91,7 @@ function Sidebar() {
               target="_blank"
               className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
             >
-              <FaGithub color="white" className="w-full h-12 p-2" />
+              <FaGithub color="white" className="w-full h-12 px-3 pt-1" />
               <p className="w-full h-fit m-0 px-0 pb-1 text-xs text-white">Github</p>
             </Nav.Link>
           </OverlayTrigger>
@@ -106,7 +103,7 @@ function Sidebar() {
               target="_blank"
               className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
             >
-              <FaLinkedin color="white" className="w-full h-12 p-2" />
+              <FaLinkedin color="white" className="w-full h-12 px-3 pt-1" />
               <p className="w-full h-fit m-0 px-0 pb-1 text-xs text-white">Linkedin</p>
             </Nav.Link>
           </OverlayTrigger>

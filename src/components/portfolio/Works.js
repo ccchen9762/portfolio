@@ -19,9 +19,9 @@ function WorkBlock({index}) {
         <div className="w-80 flex flex-col items-center justify-center">
           <Image
             src={require(`../../assets/images/${projectInfo.projects[index].cover.src}`)}
-            className="w-full h-60 object-cover object-center shadow-black hover:!shadow-xl"
+            className="w-full h-60 rounded-md object-cover object-center shadow-black hover:!shadow-xl"
           />
-          <h3 className="text-yellow-700 text-center text-2xl mt-2 bg-transparent	Monstserrat">{projectInfo.projects[index].title.replaceAll('-', ' ')}</h3>
+          <h3 className="text-yellow-700 text-center text-xl mt-2 bg-transparent	Monstserrat">{projectInfo.projects[index].title.replaceAll('-', ' ')}</h3>
         </div>
       </Link>
     </Col>

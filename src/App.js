@@ -19,9 +19,8 @@ function App() {
           <Sidebar />
         </div>
         <div className="w-full bg-zinc-200">
-          <Container className="h-full">
-            <Row className="h-full">
-              <Col className="m-0 p-0">
+          <Container className="h-full ">
+            <Row className="h-full m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
                   <Route path="/" exact={true} element={<Profile />} />
@@ -29,7 +28,6 @@ function App() {
                   <Route path="/works" exact={true} element={<Works />} />
                   <Route path="/works/:title" exact={true} element={<Overview />} />
                 </Routes>
-              </Col>
             </Row>
           </Container>
         </div>

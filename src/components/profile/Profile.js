@@ -34,7 +34,7 @@ function Profile() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 1.2,
-              delay: 1.6,
+              delay: 1.4,
               ease: [0, 0.71, 0.2, 1.01]
             }}>
             <p className="codeFont text-xl">Master of Science in Computer Science from University of Southern California</p>
@@ -45,7 +45,7 @@ function Profile() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 1.2,
-              delay: 3.0,
+              delay: 2.6,
               ease: [0, 0.71, 0.2, 1.01]
             }}>
             <p className="codeFont text-xl">Skilled in computer graphics, game, Android and web development.</p>
@@ -56,7 +56,7 @@ function Profile() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 1.2,
-              delay: 4.4,
+              delay: 4.0,
               ease: [0, 0.71, 0.2, 1.01]
             }}>
             <p className="codeFont text-xl">Fond of music, gaming and traveling.</p>
@@ -66,7 +66,7 @@ function Profile() {
           <TypeAnimation
             sequence={[
               5200,
-              "Feel free to reach out to me!",
+              "Take a look of my works, and feel free to reach out to me!",
             ]}
             wrapper="span"
             speed={50}

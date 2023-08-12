@@ -19,7 +19,7 @@ function Experience() {
 
   return (
     <motion.div
-      className="box w-full h-fit"
+      className="box w-full h-fit px-5"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{

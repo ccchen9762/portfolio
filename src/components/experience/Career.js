@@ -17,12 +17,16 @@ function Career(index) {
   };
 
   return  (
-    <Row className="w-auto h-fit mx-3 mt-5 p-8 bg-stone-50 rounded-md raleway">
-      <p className="mb-2 px-4 text-3xl text-yellow-700">{careerInfo.careers[index.index].position}</p>
-      <p className="mb-0 px-4 text-lg text-amber-600">{careerInfo.careers[index.index].company}</p>
-      <p className="mb-2 px-4 text-lg text-amber-500">{careerInfo.careers[index.index].location}</p>
-      <p className="mb-2 px-4 text-md text-stone-500">{careerInfo.careers[index.index].time}</p>
-      <ul className="mb-2 px-5 text-lg list-disc">
+    <Row className="w-auto h-fit mx-3 my-4 p-8 bg-stone-50 rounded-md border-b-4 border-zinc-600 raleway">
+      <Col className="p-0">
+        <p className="mb-1 px-4 text-xl text-yellow-700">{careerInfo.careers[index.index].position}</p>
+      </Col>
+      <Col className="p-0">
+        <p className="mb-2 px-4 text-right text-sm text-stone-500">{careerInfo.careers[index.index].time}</p>
+      </Col>
+      <p className="mb-1 px-4 text-md text-amber-600">{careerInfo.careers[index.index].company}</p>
+      <p className="mb-3 px-4 text-md text-amber-500">{careerInfo.careers[index.index].location}</p>
+      <ul className="mb-2 px-5 py-3 text-md text-zinc-600 list-disc bg-orange-100 rounded-md">
         {bulletpoints()}
       </ul>
     </Row>
