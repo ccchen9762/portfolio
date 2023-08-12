@@ -25,7 +25,7 @@ function Sidebar() {
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
   return (
-    <div className="flex items-center w-20 h-screen m-0 py-2">
+    <div className="flex items-center w-20 h-screen m-0 py-2 raleway">
       <Nav className="h-fit p-0">
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Profile")}>
@@ -64,7 +64,7 @@ function Sidebar() {
           </OverlayTrigger>
         </Nav.Item>
         <Nav.Item className="w-full h-fit px-2 py-1.5">
-          <OverlayTrigger placement="right" overlay={renderTooltip("Protfolio")}>
+          <OverlayTrigger placement="right" overlay={renderTooltip("Portfolio")}>
             <Link
               to="/works"
               onClick={() => {
