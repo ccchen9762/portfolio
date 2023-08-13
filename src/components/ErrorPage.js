@@ -1,4 +1,4 @@
-import { Row, Col, Button, Image } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 function ErrorPage() {
   return (

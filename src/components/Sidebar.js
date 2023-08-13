@@ -29,7 +29,7 @@ function Sidebar() {
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Profile")}>
             <Link
-              to="/"
+              to="/portfolio"
               onClick={() => {
                 setOnRoute(0);
               }}
@@ -47,7 +47,7 @@ function Sidebar() {
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Experience")}>
             <Link
-              to="/experience"
+              to="/portfolio/experience"
               onClick={() => {
                 setOnRoute(1);
               }}
@@ -65,7 +65,7 @@ function Sidebar() {
         <Nav.Item className="w-full h-fit px-2 py-1.5">
           <OverlayTrigger placement="right" overlay={renderTooltip("Portfolio")}>
             <Link
-              to="/works"
+              to="/portfolio/works"
               onClick={() => {
                 setOnRoute(2);
               }}
@@ -96,9 +96,9 @@ function Sidebar() {
           </OverlayTrigger>
         </Nav.Item>
         <Nav.Item className="w-full h-fit px-2 py-1.5">
-          <OverlayTrigger placement="right" overlay={renderTooltip("https://github.com/moom1315")}>
+          <OverlayTrigger placement="right" overlay={renderTooltip("https://github.com/ccchen9762")}>
             <Nav.Link
-              href="https://github.com/moom1315"
+              href="https://github.com/ccchen9762"
               target="_blank"
               className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
             >

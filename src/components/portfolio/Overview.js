@@ -36,7 +36,7 @@ function Overview() {
         }}>
         <div className="bg-slate-50">
           <Row className="w-full h-fit m-0 p-0">
-            <Link to="/works" className='w-fit h-fit col no-underline mt-3'>
+            <Link to="/portfolio/works" className='w-fit h-fit col no-underline mt-3'>
               <BiLeftArrowAlt className='w-12 h-12 hover:cursor-pointer hover:!text-gray-600 active:!text-gray-400 text-black'/>
             </Link>
           </Row>  
@@ -55,7 +55,7 @@ function Overview() {
           {
             projectInfo.projects[index].link !== "" ? (
               <Row className="w-full h-fit m-0 p-0">
-                <a href={projectInfo.projects[index].link} className="text-center text-2xl font-bold mt-2" target="_blank">
+                <a href={projectInfo.projects[index].link} className="text-center text-2xl font-bold mt-2" target="_blank" rel="noopener noreferrer">
                   Check out the link!
                 </a>
               </Row>

@@ -20,7 +20,7 @@ function Carousel({images}) {
               if(item.type === "img")
                 return <Image src={require(`../../assets/images/${item.src}`)} alt={item.alt} key={index} className={image === index ? "w-auto h-full py-4 select-none" : "hidden"}/>
               else
-                return <iframe src={item.src} className={image === index ? "w-8/12 h-full py-4 select-none" : "hidden"}/>
+                return <iframe title="embeded-video" src={item.src} className={image === index ? "w-8/12 h-full py-4 select-none" : "hidden"}/>
           })}
         <BsArrowRightCircleFill className="absolute w-8 h-8 right-4 text-white drop-shadow-lg hover:cursor-pointer hover:!text-slate-200 active:!text-slate-600" onClick={nextSlide}/>
         <span className="flex absolute bottom-2">

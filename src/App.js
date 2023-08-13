@@ -21,10 +21,10 @@ function App() {
             <Row className="h-full m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
-                  <Route path="/" exact={true} element={<Profile />} />
-                  <Route path="/experience" exact={true} element={<Experience />} />
-                  <Route path="/works" exact={true} element={<Works />} />
-                  <Route path="/works/:title" exact={true} element={<Overview />} />
+                  <Route path="/portfolio" exact={true} element={<Profile />} />
+                  <Route path="/portfolio/experience" exact={true} element={<Experience />} />
+                  <Route path="/portfolio/works" exact={true} element={<Works />} />
+                  <Route path="/portfolio/works/:title" exact={true} element={<Overview />} />
                 </Routes>
             </Row>
           </Container>

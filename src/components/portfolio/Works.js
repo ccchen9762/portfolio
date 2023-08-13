@@ -15,7 +15,7 @@ function WorkBlock({index}) {
       xl={4}
       className="h-fit mt-3 px-2 py-2 d-flex align-items-center justify-content-center"
     >
-      <Link to={`/works/${projectInfo.projects[index].title}`} className="w-72 flex flex-col items-center justify-center no-underline shiftAnim">
+      <Link to={`/portfolio/works/${projectInfo.projects[index].title}`} className="w-72 flex flex-col items-center justify-center no-underline shiftAnim">
         <div className="w-80 flex flex-col items-center justify-center">
           <Image
             src={require(`../../assets/images/${projectInfo.projects[index].cover.src}`)}
