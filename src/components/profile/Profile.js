@@ -2,13 +2,15 @@ import { Row, Col, Button, Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 
+import OceanCanvas from './OceanCanvas.js'
+
 import links from '../../assets/data/Links.json'
 import bgVideo from '../../assets/bg.mp4'
 
 function Profile() {
   return(
     <motion.div
-      className="w-full h-full box flex flex-col"
+      className="w-full h-fit box flex flex-col"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -16,10 +18,11 @@ function Profile() {
         delay: 0,
         ease: [0, 0.71, 0.2, 1.01]
       }}>
-      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+      {/*<video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video>*/}
+      <OceanCanvas/>
       <Container className="container z-10 mt-28">
         <Row className="mt-4 px-4 w-full h-fit text-amber-200">
           <TypeAnimation
