@@ -31,10 +31,10 @@ function Topbar() {
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
   return (
-    <Container className="sticky left-0 z-50 flex w-full h-14 mx-auto my-0">
-      <Col className="flex flex-row w-fit h-full px-4 py-0">
+    <div className="sticky left-0 z-50 flex w-full h-14 my-0">
+      <Col className="flex flex-row w-fit h-full px-0.5 md:px-8 xl:px-16 py-0 transition-all duration-300">
         <Nav className="w-fit h-full p-0">
-          <Nav.Item className="w-20 h-full px-2 py-0.5">
+          <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <Link
               to="/portfolio"
               onClick={() => {
@@ -46,11 +46,11 @@ function Topbar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="w-full h-fit mx-auto px-3 py-0.5" />
+              <CgProfile color={onRoute === 0 ? "coral" : "white"} className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
               <p className={ onRoute === 0 ? "w-full h-fit m-auto p-0 text-xs text-orange-600" : "w-full h-fit m-auto p-0 text-xs text-white"}>Profile</p>
             </Link>
           </Nav.Item>
-          <Nav.Item className="w-20 h-full px-2 py-0.5">
+          <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <Link
               to="/portfolio/experience"
               onClick={() => {
@@ -62,11 +62,11 @@ function Topbar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="w-full h-fit mx-auto px-3 py-0.5" />
+              <BiBriefcaseAlt color={onRoute === 1 ? "coral" : "white"} className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
               <p className={ onRoute === 1 ? "w-full h-fit m-auto p-0 text-xs text-orange-600" : "w-full h-fit m-auto p-0 text-xs text-white"}>Experience</p>
             </Link>
           </Nav.Item>
-          <Nav.Item className="w-20 h-full px-2 py-0.5">
+          <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <Link
               to="/portfolio/works"
               onClick={() => {
@@ -78,53 +78,53 @@ function Topbar() {
                   : "w-full h-fit m-0 p-0 nav-link rounded-xl text-center hover:bg-stone-500"
               }
             >
-              <AiOutlineAppstore color={onRoute === 2 ? "coral" : "white"} className="w-full h-fit mx-auto px-3 py-0.5" />
+              <AiOutlineAppstore color={onRoute === 2 ? "coral" : "white"} className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
               <p className={ onRoute === 2 ? "w-full h-fit m-auto p-0 text-xs text-orange-600" : "w-full h-fit m-auto p-0 text-xs text-white"}>Portfolio</p>
             </Link>
           </Nav.Item>
         </Nav>
       </Col>
       
-      <Col className="flex flex-row-reverse w-fit h-full px-4 py-0">
+      <Col className="flex flex-row-reverse w-fit h-full px-0.5 md:px-8 xl:px-16 py-0 transition-all duration-300">
         <Nav className="w-fit h-full p-0">
-          <Nav.Item onMouseLeave={() => {setShowCopiedMessage(false)}} className="w-20 h-full px-2 py-0.5">
+          <Nav.Item onMouseLeave={() => {setShowCopiedMessage(false)}} className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <OverlayTrigger placement="bottom" overlay={showCopiedMessage ? renderTooltip("Email address copied!") : renderTooltip("click to copy: \n ccchen9762@gmail.com")}>
               <Nav.Link
                 className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
                 onClick={() => handleCopyClick("ccchen9762@gmail.com")}
               >
-                <BiLogoGmail color="white" className="w-full h-fit mx-auto px-3 py-0.5" />
+                <BiLogoGmail color="white" className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
                 <p className="w-full h-fit m-auto p-0 text-xs text-white">Email</p>
               </Nav.Link>
             </OverlayTrigger>
           </Nav.Item>
-          <Nav.Item className="w-20 h-full px-2 py-0.5">
+          <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <OverlayTrigger placement="bottom" overlay={renderTooltip("https://github.com/ccchen9762")}>
               <Nav.Link
                 href="https://github.com/ccchen9762"
                 target="_blank"
                 className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
               >
-                <FaGithub color="white" className="w-full h-fit mx-auto px-3 py-0.5" />
+                <FaGithub color="white" className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
                 <p className="w-full h-fit m-auto p-0 text-xs text-white">Github</p>
               </Nav.Link>
             </OverlayTrigger>
           </Nav.Item>
-          <Nav.Item className="w-20 h-full px-2 py-0.5">
+          <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <OverlayTrigger placement="bottom" overlay={renderTooltip("https://www.linkedin.com/in/ching-chih-chen/")}>
               <Nav.Link
                 href="https://www.linkedin.com/in/ching-chih-chen/"
                 target="_blank"
                 className="w-full h-fit m-0 p-0 rounded-xl text-center hover:bg-stone-500"
               >
-                <FaLinkedin color="white" className="w-full h-fit mx-auto px-3 py-0.5" />
+                <FaLinkedin color="white" className="flex-grow w-fit h-full mx-auto px-0 py-0.5" />
                 <p className="w-full h-fit m-auto p-0 text-xs text-white">Linkedin</p>
               </Nav.Link>
             </OverlayTrigger>
           </Nav.Item>
         </Nav>
       </Col>
-    </Container>
+    </div>
   );
 }
 
