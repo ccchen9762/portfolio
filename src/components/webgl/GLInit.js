@@ -1,4 +1,6 @@
 import { mat4 } from 'gl-matrix';
+import vs from './VertexShader';
+import fs from './FragmentShader';
 
 // Helper function to compile a shader
 function compileShader(gl, source, type) {
@@ -36,21 +38,9 @@ export function initWebGL(canvas) {
   }
 
   // --- Shaders ---
-  const vertexShaderSource = `
-    attribute vec3 a_position;
-    uniform mat4 u_modelViewProjectionMatrix;
+  const vertexShaderSource = vs;
 
-    void main() {
-      gl_Position = u_modelViewProjectionMatrix * vec4(a_position, 1.0);
-    }
-  `;
-
-  const fragmentShaderSource = `
-    precision mediump float;
-    void main() {
-      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); // Solid red color
-    }
-  `;
+  const fragmentShaderSource = fs;
 
   const vertexShader = compileShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
   const fragmentShader = compileShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER);

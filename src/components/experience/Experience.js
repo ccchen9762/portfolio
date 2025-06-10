@@ -19,7 +19,7 @@ function Experience() {
 
   return (
     <motion.div
-      className="box w-full h-fit px-5"
+      className="box w-full h-fit px-1 md:px-5"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -28,7 +28,7 @@ function Experience() {
         ease: [0, 0.71, 0.2, 1.01]
       }}>
       <Row className="w-full h-fit m-0 p-0">
-        <h3 className="text-yellow-200 text-4xl text-center mt-5 Monstserrat">EXPERIENCES</h3>
+        <h3 className="text-yellow-300 text-4xl text-center mt-5 Monstserrat truncate">EXPERIENCES</h3>
       </Row>
       {CareerBlocks()}
     </motion.div>

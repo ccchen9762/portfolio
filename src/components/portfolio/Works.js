@@ -10,9 +10,9 @@ import projectInfo from "../../assets/data/ProjectInfo.json";
 function WorkBlock({index}) {
   return (
     <Col
-      xs={12}
-      md={6}
-      xl={4}
+      sm={12}
+      xl={6}
+      xxl={4}
       className="h-fit mt-3 px-2 py-2 d-flex align-items-center justify-content-center"
     >
       <Link to={`/portfolio/works/${projectInfo.projects[index].title}`} className="w-72 flex flex-col items-center justify-center no-underline shiftAnim">
@@ -21,7 +21,7 @@ function WorkBlock({index}) {
             src={require(`../../assets/images/${projectInfo.projects[index].cover.src}`)}
             className="w-full h-60 rounded-md object-cover object-center shadow-black hover:!shadow-xl"
           />
-          <h3 className="text-yellow-700 text-center text-xl mt-2 bg-transparent	Monstserrat">{projectInfo.projects[index].title.replaceAll('-', ' ')}</h3>
+          <h3 className="text-amber-300 text-center text-xl mt-2 bg-transparent	Monstserrat">{projectInfo.projects[index].title.replaceAll('-', ' ')}</h3>
         </div>
       </Link>
     </Col>
@@ -51,7 +51,7 @@ function Works() {
         ease: [0, 0.71, 0.2, 1.01]
       }}>
       <Row className="w-full h-fit m-0 p-0">
-        <h3 className="text-yellow-700 text-4xl text-center mt-5 Monstserrat">PORTFOLIO</h3>
+        <h3 className="text-yellow-300 text-4xl text-center mt-5 Monstserrat truncate">PORTFOLIO</h3>
       </Row>
       <Row className="w-full h-fit m-0 p-0">
         {WorkBlocks()}

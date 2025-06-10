@@ -13,15 +13,15 @@ import Overview from "./components/portfolio/Overview.js";
 function App() {
   return (
     <Router>
-      <div className="flex h-fit">
+      <div className="w-full h-full">
         {/*<div className="sticky top-0 w-fit h-screen bg-zinc-600 z-50">
           <Sidebar />
         </div>*/}
-        <div className="w-full h-fit bg-zinc-50">
-          <div className="w-full h-fit bg-zinc-600">
+        <div className="flex flex-col w-full min-h-screen h-fit bg-zinc-900">
+          <div className="w-full h-fit">
             <Topbar />
           </div>
-          <Container className="h-full bg-zinc-50">
+          <Container fluid="lg" className="flex-grow h-full">
             <Row className="h-full m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />

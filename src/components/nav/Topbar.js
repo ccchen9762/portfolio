@@ -31,8 +31,8 @@ function Topbar() {
   const renderTooltip = (text) => <Tooltip>{text}</Tooltip>;
 
   return (
-    <div className="sticky left-0 z-50 flex w-full h-14 my-0">
-      <Col className="flex flex-row w-fit h-full px-0.5 md:px-8 xl:px-16 py-0 transition-all duration-300">
+    <Container fluid="lg" className="sticky left-0 z-50 flex w-full h-14 my-0 !px-0.5 md:!px-3 overflow-x-auto">
+      <Col className="flex flex-row w-fit h-full px-1 xl:px-16 py-0 transition-all duration-300">
         <Nav className="w-fit h-full p-0">
           <Nav.Item className="flex flex-col w-16 md:w-20 h-full px-0.5 md:px-2 py-0.5 transition-all duration-300">
             <Link
@@ -124,7 +124,7 @@ function Topbar() {
           </Nav.Item>
         </Nav>
       </Col>
-    </div>
+    </Container>
   );
 }
 

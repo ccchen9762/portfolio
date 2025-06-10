@@ -17,7 +17,7 @@ function Career(index) {
   };
 
   return  (
-    <Row className="w-auto h-fit mx-3 my-4 p-8 bg-stone-50 rounded-md border-b-4 border-zinc-600 raleway">
+    <Row className="w-auto h-fit mx-3 my-4 p-3 md:p-8 bg-stone-50 rounded-md border-b-4 border-zinc-600 raleway">
       <Col className="p-0">
         <p className="mb-1 px-4 text-xl text-yellow-700">{careerInfo.careers[index.index].position}</p>
       </Col>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { mat4 } from 'gl-matrix'; // Import mat4 from gl-matrix
+import initWebGL from '../webgl/GLInit'
 
 function OceanCanvas() {
   const canvasRef = useRef(null);       // Reference to the canvas DOM element
