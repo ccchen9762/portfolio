@@ -17,10 +17,8 @@ function App() {
         {/*<div className="sticky top-0 w-fit h-screen bg-zinc-600 z-50">
           <Sidebar />
         </div>*/}
-        <div className="flex flex-col w-full min-h-screen h-fit bg-zinc-900">
-          <div className="w-full h-fit">
-            <Topbar />
-          </div>
+        <div className="flex flex-col w-full min-h-screen h-fit bg-zinc-800">
+          <Topbar />
           <Container fluid="lg" className="flex-grow h-full">
             <Row className="h-full m-0 p-0">
                 <Routes>
