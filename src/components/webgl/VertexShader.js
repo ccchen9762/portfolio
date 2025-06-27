@@ -1,10 +1,9 @@
-const vs = `
-attribute vec3 a_position;
-uniform mat4 u_modelViewProjectionMatrix;
+const VertexShaderSource = `
+attribute vec4 aPosition;
 
 void main() {
-    gl_Position = u_modelViewProjectionMatrix * vec4(a_position, 1.0);
+    gl_Position = aPosition;
 }
 `
 
-export default vs;
+export default VertexShaderSource;
