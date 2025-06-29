@@ -61,6 +61,8 @@ function OceanCanvas() {
     }
     programRef.current = program;
 
+    gl.useProgram(program); // need to be active to setup attributes and uniforms
+
     program.attributes = {
       position: gl.getAttribLocation(program, 'aPosition'),
     };
@@ -172,7 +174,7 @@ function OceanCanvas() {
         gl.deleteProgram(programRef.current);
       }
     };
-  }, []);
+  }, [initWebGL, initPositionBuffer, animate]);
 
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full object-cover z-0"/>;
 }
