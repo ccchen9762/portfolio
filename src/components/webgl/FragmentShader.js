@@ -11,10 +11,11 @@ const mat2 rotation2D  = mat2(0.80, 0.60, -0.60, 0.80);
 const mat2 rotation2Di = mat2(0.80, -0.60, 0.60, 0.80);
 
 const vec3 oceanAmbeint = vec3(0.1, 0.6, 0.8) * 0.1;
-const vec3 oceanDiffuse = vec3(0.1, 0.6, 0.8) * 0.33;
-const vec3 oceanSpecular = vec3(1.0, 1.0, 1.0) * 0.4;
+const vec3 oceanDiffuse = vec3(0.1, 0.6, 0.8);
+const vec3 oceanSpecular = vec3(1.0, 1.0, 1.0) * 0.6;
 
 const vec3 skyColor = vec3(0.4, 0.3, 0.5) * 0.5;
+const vec3 skyColorDark = vec3(0.1, 0.1, 0.3) * 0.5;
 
 const vec3 lightDirection = normalize(vec3(0.35, 0.3, -0.6));
 const vec3 lightColor = vec3(0.9, 0.8, 0.55) * 0.5;
@@ -51,7 +52,7 @@ vec3 oceanValueNoise(vec2 pos){
 vec3 oceanFBM(vec3 pos){    
     float lacunarity = 1.9;
     float gain = 0.38;
-    float amplitude = 0.05;
+    float amplitude = 0.06;
     float height = 0.0;
     vec2 derivative = vec2(0.0, 0.0);
     mat2 reverseMat = mat2(1.0, 0.0, 0.0, 1.0);
@@ -80,7 +81,7 @@ float specular(vec3 light, vec3 normal, vec3 rayDirection, float shiness) {
 }
 
 vec3 getOceanColor(vec3 pos, vec3 normal, vec3 rayDirection, float distance) {  
-    vec3 diffuseColor = oceanDiffuse * diffuse(lightDirection, normal);
+    vec3 diffuseColor = oceanDiffuse * diffuse(lightDirection, normal) * skyColor;
     vec3 specularColor = oceanSpecular * specular(lightDirection, normal, normalize(rayDirection), 10.0);
 
     vec3 color = oceanAmbeint + diffuseColor + specularColor * lightColor;
@@ -129,7 +130,11 @@ void main() {
 
     //color = vec3(totalDistance * 0.05);
     if(totalDistance > maxDistance){
-        color = skyColor;
+        float blendFactorY = (rayDirection.y + 1.0) * 0.5;
+        blendFactorY = smoothstep(0.2, 1.0, blendFactorY);
+        float blendFactorX = (rayDirection.x + 1.0) * 0.5;
+        blendFactorX = smoothstep(0.0, 1.0, blendFactorX); 
+        color = mix(mix(skyColor, skyColorDark, blendFactorY), skyColor, -blendFactorX);
     }
     else{
         color = getOceanColor(pos, normal, rayDirection, totalDistance);
