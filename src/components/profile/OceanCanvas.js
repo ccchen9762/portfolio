@@ -9,6 +9,7 @@ function OceanCanvas() {
   const animationFrameId = useRef(null);
   const positionBufferRef = useRef(null);
   const startTimeRef = useRef(0);
+  const mountedRef = useRef(false);
 
   // Function to initialize WebGL and draw
   const initWebGL = useCallback(() => {
@@ -152,29 +153,38 @@ function OceanCanvas() {
     gl.drawArrays(gl.TRIANGLES, 0, 6);
   }, []);
 
-  // The main animation loop function
-  const animate = useCallback(() => {
-    resize();
-    render();
-
-    animationFrameId.current = requestAnimationFrame(animate);
-  }, [resize, render]);
-
   useEffect(() => {
+    mountedRef.current = true;
+
     initWebGL();
     initPositionBuffer();
-    requestAnimationFrame(animate);
+    resize();
+
+    const animate = () => {
+      if (!mountedRef.current) {
+        return;
+      }
+      render();
+      animationFrameId.current = requestAnimationFrame(animate);
+    };
+    animationFrameId.current = requestAnimationFrame(animate);
+
+    window.addEventListener('resize', resize);
 
     // cleanup when component unmounts
     return () => {
+      mountedRef.current = false;
+
       cancelAnimationFrame(animationFrameId.current);
+      window.removeEventListener('resize', resize);
+
       const gl = webglContextRef.current;
       if (gl) {
         gl.deleteBuffer(positionBufferRef.current);
         gl.deleteProgram(programRef.current);
       }
     };
-  }, [initWebGL, initPositionBuffer, animate]);
+  }, [initWebGL, initPositionBuffer, render, resize]);
 
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full object-cover z-0"/>;
 }
