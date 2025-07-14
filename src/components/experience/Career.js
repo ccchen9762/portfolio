@@ -19,14 +19,14 @@ function Career(index) {
   return  (
     <Row className="w-auto h-fit mx-3 my-4 p-3 md:p-8 bg-stone-50 rounded-md border-b-4 border-zinc-600 raleway">
       <Col className="p-0">
-        <p className="mb-1 px-4 text-xl text-yellow-700">{careerInfo.careers[index.index].position}</p>
+        <p className="mb-1 px-4 text-xl text-yellow-700 font-bold">{careerInfo.careers[index.index].position}</p>
       </Col>
       <Col className="p-0">
-        <p className="mb-2 px-4 text-right text-sm text-stone-500">{careerInfo.careers[index.index].time}</p>
+        <p className="mb-2 px-4 text-right text-sm text-stone-500 font-medium">{careerInfo.careers[index.index].time}</p>
       </Col>
-      <p className="mb-1 px-4 text-md text-amber-600">{careerInfo.careers[index.index].company}</p>
-      <p className="mb-3 px-4 text-md text-amber-500">{careerInfo.careers[index.index].location}</p>
-      <ul className="mb-2 px-5 py-3 text-md text-zinc-600 list-disc bg-orange-100 rounded-md">
+      <p className="mb-1 px-4 text-md text-amber-600 font-semibold">{careerInfo.careers[index.index].company}</p>
+      <p className="mb-3 px-4 text-md text-amber-500 font-semibold">{careerInfo.careers[index.index].location}</p>
+      <ul className="mb-2 px-5 py-3 text-md text-zinc-600 list-disc bg-orange-100 rounded-md font-medium">
         {bulletpoints()}
       </ul>
     </Row>
