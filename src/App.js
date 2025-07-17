@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 
 import ErrorPage from "./components/ErrorPage.js";
@@ -23,6 +23,7 @@ function App() {
             <Row className="h-full m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
+                  <Route path="/" element={<Navigate to="/portfolio" replace />} />
                   <Route path="/portfolio" exact={true} element={<Profile />} />
                   <Route path="/portfolio/experience" exact={true} element={<Experience />} />
                   <Route path="/portfolio/works" exact={true} element={<Works />} />
