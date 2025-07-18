@@ -19,8 +19,8 @@ function App() {
         </div>*/}
         <div className="flex flex-col w-full min-h-screen h-fit bg-zinc-800">
           <Topbar />
-          <Container fluid="lg" className="flex-grow h-full">
-            <Row className="h-full m-0 p-0">
+          <Container fluid="lg" className="flex-grow w-full h-full p-0">
+            <div className="w-full h-full m-0 p-0">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
                   <Route path="/" element={<Navigate to="/portfolio" replace />} />
@@ -29,7 +29,7 @@ function App() {
                   <Route path="/portfolio/works" exact={true} element={<Works />} />
                   <Route path="/portfolio/works/:title" exact={true} element={<Overview />} />
                 </Routes>
-            </Row>
+            </div>
           </Container>
         </div>
       </div>

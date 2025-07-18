@@ -9,7 +9,7 @@ import bgVideo from '../../assets/bg.mp4'
 function Profile() {
   return(
     <motion.div
-      className="w-full h-fit box flex flex-col"
+      className="w-full min-h-fit h-full p-0 box flex flex-col"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -22,8 +22,8 @@ function Profile() {
         Your browser does not support the video tag.
       </video>*/}
       <OceanCanvas/>
-      <Container className="container z-10 mt-28">
-        <Row className="mt-4 px-4 w-full h-fit text-amber-200">
+      <Container className="container z-10 mt-12 md:mt-28 !px:8 md:!px-16">
+        <Row className="mt-4 mx-auto px-4 w-full h-fit text-amber-200">
           <TypeAnimation
             sequence={[
               " ",
@@ -36,7 +36,7 @@ function Profile() {
             cursor={false}
           />
         </Row>
-        <Row className="mt-5 px-4 w-full h-fit text-slate-50">
+        <Row className="mt-5 mx-auto px-4 w-full h-fit text-slate-50">
           <motion.div
             className=""
             initial={{ opacity: 0, scale: 1 }}
@@ -64,16 +64,16 @@ function Profile() {
             cursor={false}
           />
         </Row>*/}
-        <Row className="mt-5 px-4 w-full h-16">
+        <Row className="mt-5 mx-auto px-4 w-full h-16">
           <Col className="w-fit h-fit codeFont text-2xl">
             <motion.div
-            className=""
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 1.75,
-              ease: [0, 0.71, 0.2, 1.01]
+              className=""
+              initial={{ opacity: 0, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 1.75,
+                ease: [0, 0.71, 0.2, 1.01]
             }}>
               <Button 
                 //href={links.links[0]} 

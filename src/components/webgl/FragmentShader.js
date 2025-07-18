@@ -13,9 +13,9 @@ const mat2 rotation2Di = mat2(0.80, -0.60, 0.60, 0.80);
 const vec3 oceanAmbeint = vec3(0.3, 0.6, 0.8) * 0.1;
 const vec3 oceanDiffuse = vec3(0.9, 0.9, 1.0);
 const vec3 oceanSpecular = vec3(1.0, 1.0, 1.0);
-const float oceanHeight = 0.0;
+const float oceanHeight = 0.3;
 
-const vec3 moonPosition = vec3(22.0, 20.0, -35.0);
+const vec3 moonPosition = vec3(16.0, 23.0, -35.0);
 const float moonSize = 3.0;
 const vec3 moonColor  = vec3(0.95, 0.92, 0.85);
 const vec3 mariaColor = vec3(0.75, 0.73, 0.67);
@@ -24,7 +24,7 @@ const float starScale = 5.0;
 const vec3 starColor = vec3(1.0, 1.0, 0.9) * 0.5;
 const vec3 skyColor = vec3(0.35, 0.3, 0.5) * 0.5;
 
-const vec3 lightDirection = normalize(vec3(0.5, 0.1, -1.0));
+const vec3 lightDirection = normalize(vec3(0.4, 0.1, -1.0));
 const vec3 lightColor = vec3(0.9, 0.9, 0.7) * 0.5;
 
 const float minDistance = 0.01;
