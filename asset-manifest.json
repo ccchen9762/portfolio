@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a5a4f5e9.css",
-    "main.js": "/portfolio/static/js/main.3f5046bd.js",
+    "main.css": "/portfolio/static/css/main.007c8222.css",
+    "main.js": "/portfolio/static/js/main.0dd363f5.js",
     "static/media/bg.mp4": "/portfolio/static/media/bg.fc2aa20c5e7b755e407b.mp4",
     "static/media/physics1 - Copy.jpg": "/portfolio/static/media/physics1 - Copy.04838af269110f52c29f.jpg",
     "static/media/lostsheeps.jpg": "/portfolio/static/media/lostsheeps.6b08d5e3c724b1e25218.jpg",
@@ -19,11 +19,11 @@
     "static/media/ray_tracer1.jpg": "/portfolio/static/media/ray_tracer1.48d40ceff8fd16f9d11d.jpg",
     "static/media/ray_tracer2.jpg": "/portfolio/static/media/ray_tracer2.98ea612449ebe1c1b5d3.jpg",
     "index.html": "/portfolio/index.html",
-    "main.a5a4f5e9.css.map": "/portfolio/static/css/main.a5a4f5e9.css.map",
-    "main.3f5046bd.js.map": "/portfolio/static/js/main.3f5046bd.js.map"
+    "main.007c8222.css.map": "/portfolio/static/css/main.007c8222.css.map",
+    "main.0dd363f5.js.map": "/portfolio/static/js/main.0dd363f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5a4f5e9.css",
-    "static/js/main.3f5046bd.js"
+    "static/css/main.007c8222.css",
+    "static/js/main.0dd363f5.js"
   ]
 }
