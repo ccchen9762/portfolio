@@ -5,6 +5,7 @@
             "company": "Sotera Wireless Inc.",
             "location": "Carlsbad, CA",
             "time": "Sep 2023 - present",
+            "Professional Skills": "Java Spring, Angular, Postgres, Docker, AWS",
             "bullets": [
                 "Strengthened on-premises Docker server infrastructure and security with authentication and ssl encryption via reverse proxy",
                 "Improved system reliability through developing error handling mechanisms and establishing automated build scripts for streamlined deployment workflows",
@@ -18,6 +19,7 @@
             "company": "My CareLinq Inc.",
             "location": "Los Angeles, CA",
             "time": "May 2022 - August 2022",
+            "Professional Skills": "Express.js, React, MongoDB",
             "bullets": [
                 "Integrated backend RESTful APIs with third party payment system using JavaScript and Node.js",
                 "Developed responsive frontend for payment pipeline using React and Tailwind CSS",
@@ -29,6 +31,7 @@
             "company": "Industrial Technology Research Institute",
             "location": "Hsinchu, Taiwan",
             "time": "December 2020 - July 2021",
+            "Professional Skills": "Python, Android",
             "bullets": [
                 "Applied object-oriented design principles to develop maintainable and scalable image processing applications",
                 "Utilized Python for implementing U-net CNN model with TensorFlow to enhance accuracy of image processing",

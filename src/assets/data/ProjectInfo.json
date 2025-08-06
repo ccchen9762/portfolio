@@ -1,8 +1,66 @@
 {
     "projects": [
         {
+            "title": "Ray Marching Ocean", 
+            "time": "2025 Summer",
+            "tags": ["3D rendering"],
+            "link": "https://www.shadertoy.com/view/tX33RX",
+            "cover": {
+                "src": "ocean1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
+            "images": [
+                {
+                    "src": "ocean1.jpg", 
+                    "alt": "img1",
+                    "type": "img"
+                }
+            ],
+            "description": "The dynamic background of this portfolio is a real-time WebGL rendering, a personal project inspired by a captivating Shadertoy shader. The scene is a procedural generated ocean, brought to life using the ray marching algorithm. \n\n The ocean's realistic surface is crafted with Fractal Brownian Motion (FBM), a technique that simulates natural, undulating textures. I've also incorporated a starry night sky, generated with cellular noise, and a moon texture created through layered noise. Enjoy the view and check out the link to see how it works!"
+        },
+        {
+            "title": "Optimizing Twitch for Portrait Monitors: A Tampermonkey Solution", 
+            "time": "2025 Summer",
+            "tags": ["Journal", "Web development"],
+            "link": "https://github.com/ccchen9762/tampermonkey_scripts",
+            "cover": {
+                "src": "twitch_chat1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
+            "images": [
+                {
+                    "src": "twitch_chat1.jpg", 
+                    "alt": "img1",
+                    "type": "img"
+                }
+            ],
+            "description": "I use a dual-monitor PC setup, one in landscape mode and one in portrait mode. In my casual time, I often enjoy watching Twitch streams on my portrait monitor while simultaneously working on other tasks on my landscape screen. However, Twitch's default layout isn't well-optimized for portrait orientation. The chat panel occupies the entire height of the right side, leaving the video stream with only half the screen's width, which makes it difficult to watch. Furthermore, the channel information displayed below the stream often holds little relevance while actively watching. To address the issues, I decided to develop a Tampermonkey script to reposition the chat panel beneath the video stream. \n\n My first idea was to programmatically swap the positions of the chat div and the channel information div within the page's DOM structure. After this rearrangement, I planned to use Twitch's built-in 'collapse chat' button functionality to hide the (now relocated) channel information, achieving the desired layout. Through some DOM searching and using appendChild, I was able to easily perform this swap. Visually, this approach worked. \n\n However, I soon discovered that the buttons within the chat panel had stopped functioning. Since I couldn't determine how Twitch's internal JavaScript triggers onclick events, it was challenging to restore their functionality after altering the DOM structure. This led me to consider a different strategy. \n\n I decided on an alternative approach focused on rearranging page elements using CSS properties rather than structural DOM changes. I applied display: grid to the common ancestor div of the video player and chat, then modified the order of its descendant elements. \n\n The goal was still to make the stream div extend to the far right of the page, which typically requires 'collapsing' the chat. However, I needed the chat element to remain visible in its new position. I inspected the classList of the chat and related elements in both their collapsed and expanded states. By applying the appropriate classes, I could mimic the visual behavior of a collapsed chat while keeping it visible and correctly positioned. \n\n After a process of trial and error, I successfully identified the correct CSS settings and script actions. Now, the chat panel on my portrait monitor is correctly positioned beneath the stream, and critically, all its buttons are fully functional."
+        },
+        {
+            "title": "Raspberry Pi 5 USB Wi-Fi Adapter Installation: A Troubleshooting Journey", 
+            "time": "2025 Spring",
+            "tags": ["Raspberry Pi", "Linux"],
+            "link": "",
+            "cover": {
+                "src": "rpi1.jpg", 
+                "alt": "img1",
+                "type": "img"
+            },
+            "images": [
+                {
+                    "src": "rpi1.jpg", 
+                    "alt": "img1",
+                    "type": "img"
+                }
+            ],
+            "description": "Recently, I decided to host a Wi-Fi hotspot on my Raspberry Pi 5. Unfortunately, the Raspberry Pi 5 only has one built-in Wi-Fi adapter. This means that using it to host a hotspot would prevent it from connecting to an existing Wi-Fi network simultaneously. To overcome this limitation, I purchased a USB Wi-Fi adapter. \n\n After some research, I settled on the ASUS AX1800 USB AX56 Nano. While it doesn't have an official Linux driver, online resources suggested its chipset was Linux-compatible. I consulted Gemini, which indicated the adapter's chipset was rtl8852au, also pointing me to a GitHub repository with a Debian-based Linux driver: 'https://github.com/lwfinger/rtl8852au'. The installation instructions were straightforward, but even after following them, the ip a command didn't show any new Wi-Fi adapters. Rebooting and reinstalling didn't resolve the issue, leading me to suspect the chipset might not be rtl8852au after all. I tried to find the specifications for the AX56 Nano, but interestingly, all other similar ASUS models had detailed spec pages except this one. \n\n I then attempted to identify the chipset using the USB ID from the 'lsusb' command. This ID was associated with both the AX55 Nano and the regular AX56, with chipsets of rtl8852bu and rtl8852au respectively, making identification difficult. To confirm, I connected the adapter to my Windows PC, where it had official driver support. After installing the Windows driver, I finally confirmed via Device Manager that the chipset of the ASUS AX1800 USB AX56 Nano was indeed rtl8852bu instead of rtl8852au. \n\n Thankfully, a driver for the rtl8852bu chipset was also available on GitHub: https://github.com/lwfinger/rtl8852bu. After installing this driver, the USB Wi-Fi adapter finally worked! I also noted that the driver needed to be reloaded after each reboot, so I created /etc/modprobe.d/8852bu.conf to ensure it loaded automatically. \n\n With the adapter working, I proceeded to host a hotspot and connected my phone to test it. However, I noticed the original Wi-Fi connection on the Raspberry Pi stopped working. Upon investigation, I realized this was likely due to an IP address conflict, as both my hotspot and the Wi-Fi router were using the same local IP range and subnet mask. I modified the hotspot's configuration to use a different IP address range, and both connections worked. \n\n My next step was to restrict SSH access to only my trusted devices. For my PC, I generated SSH keys using 'ssh-keygen -t rsa -b 4096' on the client machine and copied the contents of id_rsa.pub to ~/.ssh/authorized_keys on the Raspberry Pi. I then disabled password authentication by editing /etc/ssh/sshd_config and setting PasswordAuthentication no, followed by restarting the SSH service with sudo systemctl restart sshd. For my Android device, I used JuiceSSH to generate keys and performed a similar operation to authorize it on the Raspberry Pi. \n\n To further secure the Raspberry Pi, I restricted incoming connections. Since Raspberry Pi OS doesn't have a default firewall, I installed ufw. I then created rules to allow SSH traffic 'sudo ufw allow ssh' and incoming connections on the hotspot interface 'sudo ufw allow in on <adapter id>', while blocking all other incoming connections with 'sudo ufw default deny incoming'. \n\n At one point, I accidentally deleted my hotspot settings and had to recreate them. This time, I selected WPA3 encryption. To my surprise, the hotspot began restarting repeatedly. I spent some time troubleshooting, initially suspecting a driver issue. However, turns out actually AX56 Nano does not support WPA3. It would not log any error messages when configured with WPA3, it would simply restart itself. Changing the security setting back to WPA2 resolved the issue."
+        },
+        {
             "title": "Unity-2D-strategy-game", 
             "time": "2023 Spring",
+            "tags": "Game development",
             "link": "https://fingerblack.github.io/LostSheeps/",
             "cover": {
                 "src": "lostsheeps.jpg", 
@@ -21,6 +79,7 @@
         {
             "title": "Impulse-based-physics-system", 
             "time": "2022 Fall",
+            "tags": ["3D rendering", "Animation"],
             "link": "",
             "cover": {
                 "src": "physics1.jpg", 
@@ -39,6 +98,7 @@
         {
             "title": "Inverse-Kinematics", 
             "time": "2022 Spring",
+            "tags": ["3D rendering", "Animation"],
             "link": "",
             "cover": {
                 "src": "IK1.jpg", 
@@ -57,6 +117,7 @@
         {
             "title": "Angular-stock-search-website", 
             "time": "2022 Spring",
+            "tags": ["Web development"],
             "link": "https://myfirstnodejs-343823.wm.r.appspot.com/",
             "cover": {
                 "src": "stock_search1.jpg", 
@@ -75,6 +136,7 @@
         {
             "title": "Motion-capture-interpolation", 
             "time": "2022 Spring",
+            "tags": ["3D rendering", "Animation"],
             "link": "",
             "cover": {
                 "src": "mocap_interpolation1.jpg", 
@@ -93,6 +155,7 @@
         {
             "title": "Physically-based-simulation", 
             "time": "2022 Spring",
+            "tags": ["3D rendering", "Animation"],
             "link": "",
             "cover": {
                 "src": "jello_cube1.jpg", 
@@ -111,6 +174,7 @@
         {
             "title": "Ray-Tracer", 
             "time": "2021 Fall",
+            "tags": ["3D rendering"],
             "link": "",
             "cover": {
                 "src": "ray_tracer1.jpg", 
@@ -139,6 +203,7 @@
         {
             "title": "Catmull-Rom-Splines", 
             "time": "2021 Fall",
+            "tags": ["3D rendering"],
             "link": "",
             "cover": {
                 "src": "roller_coaster1.jpg", 
@@ -157,6 +222,7 @@
         {
             "title": "JPEG-Compression", 
             "time": "2017 Fall",
+            "tags": ["Image Processing"],
             "link": "",
             "cover": {
                 "src": "jpeg1.jpg", 
@@ -180,6 +246,7 @@
         {
             "title": "Java-Mario-Like-Game", 
             "time": "2016 Spring",
+            "tags": ["Game Development"],
             "link": "",
             "cover": {
                 "src": "dashan1.jpg", 
