@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.007c8222.css",
-    "main.js": "/portfolio/static/js/main.0dd363f5.js",
-    "static/media/bg.mp4": "/portfolio/static/media/bg.fc2aa20c5e7b755e407b.mp4",
+    "main.css": "/portfolio/static/css/main.66ba224b.css",
+    "main.js": "/portfolio/static/js/main.d1facf81.js",
+    "static/media/twitch_chat1.jpg": "/portfolio/static/media/twitch_chat1.3039b884c15695fab4fd.jpg",
     "static/media/physics1 - Copy.jpg": "/portfolio/static/media/physics1 - Copy.04838af269110f52c29f.jpg",
     "static/media/lostsheeps.jpg": "/portfolio/static/media/lostsheeps.6b08d5e3c724b1e25218.jpg",
+    "static/media/rpi1.jpg": "/portfolio/static/media/rpi1.536a8e346570fd63a4f5.jpg",
     "static/media/roller_coaster1.jpg": "/portfolio/static/media/roller_coaster1.d123b8deb83a44afd29a.jpg",
+    "static/media/ocean1.jpg": "/portfolio/static/media/ocean1.7a45bdef2e2ec4d64c38.jpg",
     "static/media/physics1.jpg": "/portfolio/static/media/physics1.1659b264881c13cd5e38.jpg",
     "static/media/IK1.jpg": "/portfolio/static/media/IK1.c0b5b2ae07ce1ac444b2.jpg",
     "static/media/jpeg1.jpg": "/portfolio/static/media/jpeg1.1a3c53fff2cc2ae03a1c.jpg",
-    "static/media/top_background.jpg": "/portfolio/static/media/top_background.a04c9a968614060bbb75.jpg",
     "static/media/stock_search1.jpg": "/portfolio/static/media/stock_search1.53022de258552e3cb802.jpg",
     "static/media/jello_cube1.jpg": "/portfolio/static/media/jello_cube1.368819a84a4c6b837408.jpg",
     "static/media/dashan1.jpg": "/portfolio/static/media/dashan1.6e72a6257a0d17814c12.jpg",
@@ -19,11 +20,11 @@
     "static/media/ray_tracer1.jpg": "/portfolio/static/media/ray_tracer1.48d40ceff8fd16f9d11d.jpg",
     "static/media/ray_tracer2.jpg": "/portfolio/static/media/ray_tracer2.98ea612449ebe1c1b5d3.jpg",
     "index.html": "/portfolio/index.html",
-    "main.007c8222.css.map": "/portfolio/static/css/main.007c8222.css.map",
-    "main.0dd363f5.js.map": "/portfolio/static/js/main.0dd363f5.js.map"
+    "main.66ba224b.css.map": "/portfolio/static/css/main.66ba224b.css.map",
+    "main.d1facf81.js.map": "/portfolio/static/js/main.d1facf81.js.map"
   },
   "entrypoints": [
-    "static/css/main.007c8222.css",
-    "static/js/main.0dd363f5.js"
+    "static/css/main.66ba224b.css",
+    "static/js/main.d1facf81.js"
   ]
 }
