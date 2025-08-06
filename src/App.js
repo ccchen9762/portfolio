@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import ErrorPage from "./components/ErrorPage.js";
 //import Sidebar from "./components/nav/Sidebar.js";
@@ -9,6 +9,7 @@ import Profile from "./components/profile/Profile.js";
 import Experience from "./components/experience/Experience.js";
 import Works from "./components/portfolio/Works.js";
 import Overview from "./components/portfolio/Overview.js";
+import OceanCanvas from "./components/webgl/OceanCanvas.js";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <div className="flex flex-col w-full min-h-screen h-fit bg-zinc-800">
           <Topbar />
           <Container fluid="lg" className="flex-grow w-full h-full p-0">
-            <div className="w-full h-full m-0 p-0">
+            <OceanCanvas/>
+            <div className="w-full h-full m-0 p-0 z-10 relative">
                 <Routes>
                   <Route path='*' exact={true} element={<ErrorPage />} />
                   <Route path="/" element={<Navigate to="/portfolio" replace />} />

@@ -42,7 +42,7 @@ function Works() {
 
   return (
     <motion.div
-      className="box"
+      className="box bg-black bg-opacity-50"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -51,7 +51,7 @@ function Works() {
         ease: [0, 0.71, 0.2, 1.01]
       }}>
       <Row className="w-full h-fit m-0 p-0">
-        <h3 className="text-yellow-300 text-4xl text-center mt-5 Monstserrat truncate">PORTFOLIO</h3>
+        <h3 className="text-yellow-300 text-4xl text-center mt-5 Monstserrat truncate">Works</h3>
       </Row>
       <Row className="w-full h-fit m-0 p-0">
         {WorkBlocks()}

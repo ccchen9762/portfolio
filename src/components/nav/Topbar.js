@@ -74,7 +74,7 @@ function Topbar() {
           <Nav expand="md" className="w-fit h-full p-0">
             <NavRouteItem link="/portfolio" routeNum={0} IconComponent={CgProfile} text="Profile" />
             <NavRouteItem link="/portfolio/experience" routeNum={1} IconComponent={BiBriefcaseAlt} text="Experience" />
-            <NavRouteItem link="/portfolio/works" routeNum={2} IconComponent={AiOutlineAppstore} text="Portfolio" />
+            <NavRouteItem link="/portfolio/works" routeNum={2} IconComponent={AiOutlineAppstore} text="Works" />
           </Nav>
         </Col>
         <Col xs="auto" md={6} className="flex flex-row-reverse flex-nowrap h-full px-1 xl:px-16 py-0 transition-all duration-300">
